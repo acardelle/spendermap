@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.okta.spring:okta-spring-boot-starter:0.6.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.okta.spring/okta-spring-boot-starter/0.6.0/6b58b5cddbe7daed9d9e1511c1ff577deccef7c8/okta-spring-boot-starter-0.6.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.okta.spring/okta-spring-boot-starter/0.6.0/babe5b1c935a9667bc26b8d32be651d54453565e/okta-spring-boot-starter-0.6.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

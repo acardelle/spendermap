@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.okta.spring:okta-spring-security-oauth2:0.6.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.okta.spring/okta-spring-security-oauth2/0.6.0/946de19d22c5a537c66ead94f0e9e22f4bbf638a/okta-spring-security-oauth2-0.6.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.okta.spring/okta-spring-security-oauth2/0.6.0/564070b0d547827cc92d56ac8929bbc64456e82e/okta-spring-security-oauth2-0.6.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

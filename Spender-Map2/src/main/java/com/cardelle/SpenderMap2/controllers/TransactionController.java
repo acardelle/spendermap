@@ -18,19 +18,19 @@ import javax.validation.Valid;
  * Created by LaunchCode - Enhanced by Cardelle
  */
 @Controller
-@RequestMapping("cheese")
+@RequestMapping("transaction")
 public class TransactionController {
 //test
     @Autowired
     private TransactionDao transactionDao;
 
-    // Request path: /cheese
+    // Request path: /transactions
     @RequestMapping(value = "")
     public String index(Model model) {
          model.addAttribute("transactions", transactionDao.findAll());
          model.addAttribute("title", "My Transactions");
 
-        return "cheese/index";
+        return "transaction/index";
     }
 
     @RequestMapping(value = "add", method = RequestMethod.GET)
@@ -38,7 +38,7 @@ public class TransactionController {
         model.addAttribute("title", "Add Transaction");
         model.addAttribute(new Transaction());
         model.addAttribute("cheeseTypes", CheeseType.values());
-        return "cheese/add";
+        return "transaction/add";
     }
 
     @RequestMapping(value = "add", method = RequestMethod.POST)
@@ -47,18 +47,18 @@ public class TransactionController {
 
         if (errors.hasErrors()) {
             model.addAttribute("title", "Add Transaction");
-            return "cheese/add";
+            return "transaction/add";
         }
 
         transactionDao.save(newTransaction);
-        return "cheese/index";
+        return "transaction/index";
     }
 
     @RequestMapping(value = "remove", method = RequestMethod.GET)
     public String displayRemoveCheeseForm(Model model) {
         model.addAttribute("cheeses", transactionDao.findAll());
         model.addAttribute("title", "Remove Transaction");
-        return "cheese/remove";
+        return "transaction/remove";
     }
 
     @RequestMapping(value = "remove", method = RequestMethod.POST)
@@ -69,6 +69,19 @@ public class TransactionController {
         }
 
         return "redirect:";
+    }
+
+    @RequestMapping(value = "addCSV", method = RequestMethod.POST)
+    public String processAddTransactionCSV(@ModelAttribute  @Valid Transaction newTransaction,
+                                            Errors errors, Model model) {
+
+        if (errors.hasErrors()) {
+            model.addAttribute("title", "Add Transaction");
+            return "transaction/add";
+        }
+
+        transactionDao.save(newTransaction);
+        return "transaction/index";
     }
 
 }

@@ -24,7 +24,7 @@ public class TransactionController {
     @Autowired
     private TransactionDao transactionDao;
 
-    // Request path: /transactions
+    // Request path: /transaction
     @RequestMapping(value = "")
     public String index(Model model) {
          model.addAttribute("transactions", transactionDao.findAll());

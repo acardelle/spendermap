@@ -51,12 +51,12 @@ public class TransactionController {
         }
 
         transactionDao.save(newTransaction);
-        return "transaction/index";
+        return "transaction/";
     }
 
     @RequestMapping(value = "remove", method = RequestMethod.GET)
     public String displayRemoveCheeseForm(Model model) {
-        model.addAttribute("cheeses", transactionDao.findAll());
+        model.addAttribute("transactions", transactionDao.findAll());
         model.addAttribute("title", "Remove Transaction");
         return "transaction/remove";
     }

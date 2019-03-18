@@ -1,0 +1,6 @@
+applications:
+- name: Spender-Map2
+  buildpack: java_buildpack
+  path: build/libs/Spender-Map2-0.0.1-SNAPSHOT.jar
+    services:
+      - cheese-mvc-db
